@@ -13,6 +13,7 @@ async function bootstrap() {
       enableImplicitConversion: true
     }
   }))
+  app.enableCors()
   await app.listen(457);
 }
 bootstrap();
