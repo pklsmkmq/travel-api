@@ -9,7 +9,7 @@ class BaseResponse {
         }
     }
 
-    _pagiantion(
+    _pagination(
         message: string,
         data: any,
         totalData: number,
