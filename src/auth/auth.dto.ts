@@ -30,6 +30,12 @@ export class UserDto {
     role: string;
 }
 
+export class ResetPasswordDto {
+  @IsString()
+  @MinLength(8)
+  new_password: string;
+}
+
 export class RegisterDto extends PickType(UserDto, [
     "nama",
     "email",
