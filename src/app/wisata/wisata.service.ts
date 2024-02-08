@@ -40,11 +40,8 @@ export class WisataService extends BaseResponse {
         }
     }
 
-    async findAll(query: findAllWisata): Promise<ResponsePagination> {
+    async findAll(query: findAllWisata): Promise<ResponseSuccess> {
         const {
-            page,
-            pageSize,
-            limit,
             nama_wisata,
             dari_harga,
             sampai_harga,
@@ -82,7 +79,7 @@ export class WisataService extends BaseResponse {
 
         const result = await this.wisataRepository.find({
             where: filterQuery,
-            relations: ['created_by', 'updated_by', 'kategori_id'],
+            relations: ['kategori_id'],
             select: {
                 id: true,
                 nama_wisata: true,
@@ -94,20 +91,43 @@ export class WisataService extends BaseResponse {
                     id: true,
                     nama_kategori: true,
                 },
-                created_by: {
-                    id: true,
-                    nama: true,
-                },
-                updated_by: {
-                    id: true,
-                    nama: true,
-                },
             },
-            skip: limit,
-            take: pageSize,
         });
-        
-        return this._pagination('OK', result, total, page, pageSize);
+
+        const b: any = result;
+
+        const fav = await this.favoritRepo.find({
+            relations: ['id_wisata', 'id_user'],
+            select: {
+                id: true,
+                id_wisata: {
+                    id: true
+                },
+                id_user: {
+                    id: true
+                },
+            }
+        });
+
+        let cek = "";
+
+        for (let i in b) {
+            cek = "";
+            for (let n in fav) {
+                if (b[i].id == fav[n].id_wisata.id) {
+                    b[i].favorit = true;
+                    cek = "ada";
+                    break;
+                }
+            }
+            if (cek == "") {
+                b[i].favorit = false;
+            }
+        }
+
+        console.log('data', b);
+
+        return this._success('OK', b);
     }
 
     async update(id: number, payload: UpdateWisataDto): Promise<ResponseSuccess> {

@@ -1,0 +1,492 @@
+{
+	"info": {
+		"_postman_id": "8ce1b811-29bf-4ead-9dca-c3540a356ec7",
+		"name": "travel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13073893"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"user@traver.com\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:457/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "457",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama\" : \"jr\",\r\n    \"email\" : \"jr@traver.com\",\r\n    \"password\": \"12345678\",\r\n    \"konfirmasiPassword\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:457/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "457",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lupa Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"fakebabastudio@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:457/auth/lupa-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "457",
+							"path": [
+								"auth",
+								"lupa-password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "kategori",
+			"item": [
+				{
+					"name": "Create Kategori",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6IlVzZXIiLCJlbWFpbCI6InVzZXJAdHJhdmVyLmNvbSIsImlhdCI6MTcwNzE4MzcxNywiZXhwIjoxNzA3MjcwMTE3fQ.aU6YjSBbNpLV2ykT63jzXvCBywvTXz8TzPRGSg4WoF8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nama_kategori",
+									"value": "Religion",
+									"type": "text"
+								},
+								{
+									"key": "gambar_kategori",
+									"type": "file",
+									"src": "/C:/smk/flutter/project/travel_app/assets/img/mosque.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:457/kategori/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "457",
+							"path": [
+								"kategori",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Kategori",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6IlVzZXIiLCJlbWFpbCI6InVzZXJAdHJhdmVyLmNvbSIsImlhdCI6MTcwNzM2NDQ3MiwiZXhwIjoxNzA3NDUwODcyfQ.ckY7JBXS2Dq7vXn4dwPIYaqisQiER7IwNnFEmcw0jaU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:457/kategori/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "457",
+							"path": [
+								"kategori",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail Kategori",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6IlVzZXIiLCJlbWFpbCI6InVzZXJAdHJhdmVyLmNvbSIsImlhdCI6MTcwNjU4MjIzMSwiZXhwIjoxNzA2NjY4NjMxfQ.oi03o3YhcHumYQojEORoB-M6PetmkvhRoMFsjJRKbDg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:457/kategori/detail/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "457",
+							"path": [
+								"kategori",
+								"detail",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Kategori",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6IlVzZXIiLCJlbWFpbCI6InVzZXJAdHJhdmVyLmNvbSIsImlhdCI6MTcwNjU4MjIzMSwiZXhwIjoxNzA2NjY4NjMxfQ.oi03o3YhcHumYQojEORoB-M6PetmkvhRoMFsjJRKbDg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama_kategori\": \"Religion\",\r\n    \"gambar_kategori\": \"https://i.ibb.co/q0PM63D/mosque.png\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:457/kategori/update/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "457",
+							"path": [
+								"kategori",
+								"update",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Kategori",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6IlVzZXIiLCJlbWFpbCI6InVzZXJAdHJhdmVyLmNvbSIsImlhdCI6MTcwNzE4MzcxNywiZXhwIjoxNzA3MjcwMTE3fQ.aU6YjSBbNpLV2ykT63jzXvCBywvTXz8TzPRGSg4WoF8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:457/kategori/delete/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "457",
+							"path": [
+								"kategori",
+								"delete",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "wisata",
+			"item": [
+				{
+					"name": "create wisata",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6IlVzZXIiLCJlbWFpbCI6InVzZXJAdHJhdmVyLmNvbSIsImlhdCI6MTcwNzE4MzcxNywiZXhwIjoxNzA3MjcwMTE3fQ.aU6YjSBbNpLV2ykT63jzXvCBywvTXz8TzPRGSg4WoF8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nama_wisata",
+									"value": "Umroh",
+									"type": "text"
+								},
+								{
+									"key": "gambar_wisata",
+									"type": "file",
+									"src": "/C:/Users/fitri/Downloads/1659676547-cara-mengurus-visa-umroh.jpg"
+								},
+								{
+									"key": "lokasi_wisata",
+									"value": "Mekah, Saudi Arabia",
+									"type": "text"
+								},
+								{
+									"key": "rating_wisata",
+									"value": "5.0",
+									"type": "text"
+								},
+								{
+									"key": "deskripsi_wisata",
+									"value": "Umroh 7 hari",
+									"type": "text"
+								},
+								{
+									"key": "harga_wisata",
+									"value": "50000000",
+									"type": "text"
+								},
+								{
+									"key": "kategori_id",
+									"value": "8",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:457/wisata/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "457",
+							"path": [
+								"wisata",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list wisata",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6IlVzZXIiLCJlbWFpbCI6InVzZXJAdHJhdmVyLmNvbSIsImlhdCI6MTcwNzMxNjMxMCwiZXhwIjoxNzA3NDAyNzEwfQ.2HqlcYH4VIhaNWU43tgLTkoN0v0jghGXaUe3U01-QtY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:457/wisata/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "457",
+							"path": [
+								"wisata",
+								"list"
+							],
+							"query": [
+								{
+									"key": "nama_wisata",
+									"value": "umroh",
+									"disabled": true
+								},
+								{
+									"key": "dari_harga",
+									"value": "500000",
+									"disabled": true
+								},
+								{
+									"key": "sampai_harga",
+									"value": "5000000",
+									"disabled": true
+								},
+								{
+									"key": "deskripsi_wisata",
+									"value": "7 hari",
+									"disabled": true
+								},
+								{
+									"key": "lokasi_wisata",
+									"value": "indonesia",
+									"disabled": true
+								},
+								{
+									"key": "rating_wisata",
+									"value": "5",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "favorit",
+			"item": [
+				{
+					"name": "create favorit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6IlVzZXIiLCJlbWFpbCI6InVzZXJAdHJhdmVyLmNvbSIsImlhdCI6MTcwNzMxNjMxMCwiZXhwIjoxNzA3NDAyNzEwfQ.2HqlcYH4VIhaNWU43tgLTkoN0v0jghGXaUe3U01-QtY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:457/favorit/create/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "457",
+							"path": [
+								"favorit",
+								"create",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete favorit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6IlVzZXIiLCJlbWFpbCI6InVzZXJAdHJhdmVyLmNvbSIsImlhdCI6MTcwNzMxNjMxMCwiZXhwIjoxNzA3NDAyNzEwfQ.2HqlcYH4VIhaNWU43tgLTkoN0v0jghGXaUe3U01-QtY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:457/favorit/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "457",
+							"path": [
+								"favorit",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
