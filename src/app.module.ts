@@ -10,6 +10,8 @@ import { join } from 'path';
 import { ConfigModule } from '@nestjs/config';
 // import { WisataModule } from './app/wisata/wisata.module';
 import { MailModule } from './app/mail/mail.module';
+import { WisataModule } from './app/wisata/wisata.module';
+import { FavoritModule } from './app/favorit/favorit.module';
 
 @Module({
   imports: [ServeStaticModule.forRoot({
@@ -18,7 +20,7 @@ import { MailModule } from './app/mail/mail.module';
 
   ConfigModule.forRoot({
     isGlobal: true,
-  }), TypeOrmModule.forRoot(typeOrmConfig), AuthModule, KategoriModule, MailModule],
+  }), TypeOrmModule.forRoot(typeOrmConfig), AuthModule, KategoriModule, MailModule, WisataModule, FavoritModule],
   controllers: [AppController],
   providers: [AppService],
 })

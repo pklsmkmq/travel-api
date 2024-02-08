@@ -59,6 +59,29 @@ export class KategoriService extends BaseResponse {
             take: pageSize,
         });
 
+        const nets = networkInterfaces();
+        const res = Object.create(null);
+        let ip = "";
+
+        for (const name of Object.keys(nets)) {
+            for (const net of nets[name]) {
+                const familyV4Value = typeof net.family === 'string' ? 'IPv4' : 4
+                if (net.family === familyV4Value && !net.internal) {
+                    if (!res[name]) {
+                        res[name] = [];
+                    }
+                    res[name].push(net.address);
+                    console.log('ip', net.address);
+                    ip = net.address;
+                }
+            }
+        }
+
+        for (let i in result) {
+            result[i].gambar_kategori = `http://${ip}:457/uploads/kategori/${result[i].gambar_kategori}`;
+            console.log('gambar', result[i].gambar_kategori);
+        }
+
         return this._pagination("ok", result, total, page, pageSize);
     }
 
@@ -88,7 +111,7 @@ export class KategoriService extends BaseResponse {
         });
         if (!check)
             throw new NotFoundException(`Kategori dengan id ${id} tidak ditemukan`);
-        
+
         await this.kategoriRepository.save({
             ...payload,
             id: id,
