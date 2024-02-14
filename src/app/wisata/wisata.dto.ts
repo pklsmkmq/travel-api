@@ -1,6 +1,6 @@
 import { OmitType } from "@nestjs/mapped-types";
 import { Type } from "class-transformer";
-import { IsInt, IsNotEmpty, isNumber, IsNumber, IsObject, IsOptional, IsString } from "class-validator";
+import { IsBoolean, IsInt, IsNotEmpty, isNumber, IsNumber, IsObject, IsOptional, IsString } from "class-validator";
 import { PageRequestDto } from "src/utils/dto/page.dto";
 
 export class WisataDto {
@@ -78,6 +78,10 @@ export class findAllWisata extends PageRequestDto {
     @IsNumber()
     @Type(() => Number)
     sampai_harga: number;
+
+    @IsBoolean()
+    @IsOptional()
+    favorit: boolean;
 
     @IsString()
     @IsOptional()

@@ -48,7 +48,7 @@ export class WisataService extends BaseResponse {
             deskripsi_wisata,
             lokasi_wisata,
             rating_wisata,
-            kategori
+            kategori, favorit
         } = query;
 
         const filterQuery: any = {};
@@ -95,8 +95,12 @@ export class WisataService extends BaseResponse {
         });
 
         const b: any = result;
+        const fq: any = {};
+
+        fq.id_user = Between(this.req.user.id, this.req.user.id);
 
         const fav = await this.favoritRepo.find({
+            where: fq,
             relations: ['id_wisata', 'id_user'],
             select: {
                 id: true,
@@ -109,7 +113,10 @@ export class WisataService extends BaseResponse {
             }
         });
 
+        console.log("fav", fav);
+
         let cek = "";
+        let data = [];
 
         for (let i in b) {
             cek = "";
@@ -117,6 +124,7 @@ export class WisataService extends BaseResponse {
                 if (b[i].id == fav[n].id_wisata.id) {
                     b[i].favorit = true;
                     cek = "ada";
+                    data.push(b[i]);
                     break;
                 }
             }
@@ -125,9 +133,7 @@ export class WisataService extends BaseResponse {
             }
         }
 
-        console.log('data', b);
-
-        return this._success('OK', b);
+        return this._success('OK', favorit ? data : b);
     }
 
     async update(id: number, payload: UpdateWisataDto): Promise<ResponseSuccess> {
