@@ -7,6 +7,7 @@ import { Between, Like, Repository } from 'typeorm';
 import { Favorit } from '../favorit/favorit.entity';
 import { CreateWisataDto, findAllWisata, UpdateWisataDto } from './wisata.dto';
 import { Wisata } from './wisata.entity';
+import { networkInterfaces } from 'os';
 
 @Injectable()
 export class WisataService extends BaseResponse {
@@ -87,12 +88,36 @@ export class WisataService extends BaseResponse {
                 rating_wisata: true,
                 harga_wisata: true,
                 lokasi_wisata: true,
+                gambar_wisata: true,
                 kategori_id: {
                     id: true,
                     nama_kategori: true,
                 },
             },
         });
+
+        const nets = networkInterfaces();
+        const res = Object.create(null);
+        let ip = "";
+
+        for (const name of Object.keys(nets)) {
+            for (const net of nets[name]) {
+                const familyV4Value = typeof net.family === 'string' ? 'IPv4' : 4
+                if (net.family === familyV4Value && !net.internal) {
+                    if (!res[name]) {
+                        res[name] = [];
+                    }
+                    res[name].push(net.address);
+                    console.log('ip', net.address);
+                    ip = net.address;
+                }
+            }
+        }
+
+        for (let i in result) {
+            result[i].gambar_wisata = `http://${ip}:457/uploads/wisata/${result[i].gambar_wisata}`;
+            console.log('gambar', result[i].gambar_wisata);
+        }
 
         const b: any = result;
         const fq: any = {};
