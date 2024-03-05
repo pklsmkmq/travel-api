@@ -44,7 +44,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nama\" : \"jr\",\r\n    \"email\" : \"jr@traver.com\",\r\n    \"password\": \"12345678\",\r\n    \"konfirmasiPassword\": \"12345678\"\r\n}",
+							"raw": "{\r\n    \"nama\" : \"user\",\r\n    \"email\" : \"user@traver.com\",\r\n    \"password\": \"12345678\",\r\n    \"konfirmasiPassword\": \"12345678\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -107,7 +107,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6IlVzZXIiLCJlbWFpbCI6InVzZXJAdHJhdmVyLmNvbSIsImlhdCI6MTcwNzE4MzcxNywiZXhwIjoxNzA3MjcwMTE3fQ.aU6YjSBbNpLV2ykT63jzXvCBywvTXz8TzPRGSg4WoF8",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6InVzZXIiLCJlbWFpbCI6InVzZXJAdHJhdmVyLmNvbSIsImlhdCI6MTcwOTA4Mzk5NiwiZXhwIjoxNzA5MTcwMzk2fQ.JOjK8-eDTMHznn0Fej8xPQuCYDgxeZmK4Hs7gYQWd3E",
 									"type": "string"
 								}
 							]
@@ -119,13 +119,13 @@
 							"formdata": [
 								{
 									"key": "nama_kategori",
-									"value": "Religion",
+									"value": "Beach",
 									"type": "text"
 								},
 								{
 									"key": "gambar_kategori",
 									"type": "file",
-									"src": "/C:/smk/flutter/project/travel_app/assets/img/mosque.png"
+									"src": "/C:/smk/flutter/project/travel_app/assets/img/beach.png"
 								}
 							]
 						},
@@ -152,7 +152,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6IlVzZXIiLCJlbWFpbCI6InVzZXJAdHJhdmVyLmNvbSIsImlhdCI6MTcwNzM2NDQ3MiwiZXhwIjoxNzA3NDUwODcyfQ.ckY7JBXS2Dq7vXn4dwPIYaqisQiER7IwNnFEmcw0jaU",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6InVzZXIiLCJlbWFpbCI6InVzZXJAdHJhdmVyLmNvbSIsImlhdCI6MTcwOTA4Mzk5NiwiZXhwIjoxNzA5MTcwMzk2fQ.JOjK8-eDTMHznn0Fej8xPQuCYDgxeZmK4Hs7gYQWd3E",
 									"type": "string"
 								}
 							]
@@ -295,7 +295,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6IlVzZXIiLCJlbWFpbCI6InVzZXJAdHJhdmVyLmNvbSIsImlhdCI6MTcwNzE4MzcxNywiZXhwIjoxNzA3MjcwMTE3fQ.aU6YjSBbNpLV2ykT63jzXvCBywvTXz8TzPRGSg4WoF8",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6InVzZXIiLCJlbWFpbCI6InVzZXJAdHJhdmVyLmNvbSIsImlhdCI6MTcwOTA4Mzk5NiwiZXhwIjoxNzA5MTcwMzk2fQ.JOjK8-eDTMHznn0Fej8xPQuCYDgxeZmK4Hs7gYQWd3E",
 									"type": "string"
 								}
 							]
@@ -307,17 +307,17 @@
 							"formdata": [
 								{
 									"key": "nama_wisata",
-									"value": "Umroh",
+									"value": "Gunung Krinci",
 									"type": "text"
 								},
 								{
 									"key": "gambar_wisata",
 									"type": "file",
-									"src": "/C:/Users/fitri/Downloads/1659676547-cara-mengurus-visa-umroh.jpg"
+									"src": "/C:/Users/fitri/Downloads/IMG-20230428-WA0148-2131333710.jpg"
 								},
 								{
 									"key": "lokasi_wisata",
-									"value": "Mekah, Saudi Arabia",
+									"value": "Padang, Indonesia",
 									"type": "text"
 								},
 								{
@@ -327,17 +327,17 @@
 								},
 								{
 									"key": "deskripsi_wisata",
-									"value": "Umroh 7 hari",
+									"value": "Mendaki Gunung Krinci",
 									"type": "text"
 								},
 								{
 									"key": "harga_wisata",
-									"value": "50000000",
+									"value": "2000000",
 									"type": "text"
 								},
 								{
 									"key": "kategori_id",
-									"value": "8",
+									"value": "2",
 									"type": "text"
 								}
 							]
@@ -365,7 +365,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6IlVzZXIiLCJlbWFpbCI6InVzZXJAdHJhdmVyLmNvbSIsImlhdCI6MTcwNzMxNjMxMCwiZXhwIjoxNzA3NDAyNzEwfQ.2HqlcYH4VIhaNWU43tgLTkoN0v0jghGXaUe3U01-QtY",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6InVzZXIiLCJlbWFpbCI6InVzZXJAdHJhdmVyLmNvbSIsImlhdCI6MTcwOTA4Mzk5NiwiZXhwIjoxNzA5MTcwMzk2fQ.JOjK8-eDTMHznn0Fej8xPQuCYDgxeZmK4Hs7gYQWd3E",
 									"type": "string"
 								}
 							]
@@ -373,7 +373,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:457/wisata/list",
+							"raw": "http://localhost:457/wisata/list?favorit=true",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -413,6 +413,10 @@
 									"key": "rating_wisata",
 									"value": "5",
 									"disabled": true
+								},
+								{
+									"key": "favorit",
+									"value": "true"
 								}
 							]
 						}
@@ -432,7 +436,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6IlVzZXIiLCJlbWFpbCI6InVzZXJAdHJhdmVyLmNvbSIsImlhdCI6MTcwNzMxNjMxMCwiZXhwIjoxNzA3NDAyNzEwfQ.2HqlcYH4VIhaNWU43tgLTkoN0v0jghGXaUe3U01-QtY",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6InVzZXIiLCJlbWFpbCI6InVzZXJAdHJhdmVyLmNvbSIsImlhdCI6MTcwOTA4Mzk5NiwiZXhwIjoxNzA5MTcwMzk2fQ.JOjK8-eDTMHznn0Fej8xPQuCYDgxeZmK4Hs7gYQWd3E",
 									"type": "string"
 								}
 							]
@@ -440,7 +444,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:457/favorit/create/1",
+							"raw": "http://localhost:457/favorit/create/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -449,7 +453,7 @@
 							"path": [
 								"favorit",
 								"create",
-								"1"
+								"4"
 							]
 						}
 					},
@@ -481,6 +485,159 @@
 								"favorit",
 								"delete",
 								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "booking",
+			"item": [
+				{
+					"name": "List Booking",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6InVzZXIiLCJlbWFpbCI6InVzZXJAdHJhdmVyLmNvbSIsImlhdCI6MTcwOTYwNzgzOCwiZXhwIjoxNzA5Njk0MjM4fQ.LxONiMcIc-up_7O9j0tfvcSwkD1KZnFz4sxFcMbEWV0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:457/booking/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "457",
+							"path": [
+								"booking",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save Booking",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6InVzZXIiLCJlbWFpbCI6InVzZXJAdHJhdmVyLmNvbSIsImlhdCI6MTcwOTYwNzgzOCwiZXhwIjoxNzA5Njk0MjM4fQ.LxONiMcIc-up_7O9j0tfvcSwkD1KZnFz4sxFcMbEWV0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date_booking\": \"03-05-2024\",\r\n    \"id_wisata\": 1,\r\n    \"name_booking\": \"Fullan\",\r\n    \"contact_booking\": \"081234567890\",\r\n    \"qty_booking\": 2,\r\n    \"status_booking\": false,\r\n    \"id_payment\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:457/booking/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "457",
+							"path": [
+								"booking",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "payment",
+			"item": [
+				{
+					"name": "list Payment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6InVzZXIiLCJlbWFpbCI6InVzZXJAdHJhdmVyLmNvbSIsImlhdCI6MTcwOTYwNzgzOCwiZXhwIjoxNzA5Njk0MjM4fQ.LxONiMcIc-up_7O9j0tfvcSwkD1KZnFz4sxFcMbEWV0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:457/payment/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "457",
+							"path": [
+								"payment",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Payment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6InVzZXIiLCJlbWFpbCI6InVzZXJAdHJhdmVyLmNvbSIsImlhdCI6MTcwOTYwNzgzOCwiZXhwIjoxNzA5Njk0MjM4fQ.LxONiMcIc-up_7O9j0tfvcSwkD1KZnFz4sxFcMbEWV0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name_payment",
+									"value": "Dana",
+									"type": "text"
+								},
+								{
+									"key": "gambar_payment",
+									"type": "file",
+									"src": "/C:/Users/fitri/Downloads/dana.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:457/payment/create",
+							"host": [
+								"localhost"
+							],
+							"port": "457",
+							"path": [
+								"payment",
+								"create"
 							]
 						}
 					},

@@ -1,7 +1,7 @@
 import { HttpException, HttpStatus, Inject, Injectable, NotFoundException } from '@nestjs/common';
 import { REQUEST } from '@nestjs/core';
 import { InjectRepository } from '@nestjs/typeorm';
-import { ResponsePagination, ResponseSuccess } from 'src/interface/response';
+import { ResponseSuccess } from 'src/interface/response';
 import BaseResponse from 'src/utils/response/base.response';
 import { Between, Like, Repository } from 'typeorm';
 import { Favorit } from '../favorit/favorit.entity';

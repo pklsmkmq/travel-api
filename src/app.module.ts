@@ -12,6 +12,8 @@ import { ConfigModule } from '@nestjs/config';
 import { MailModule } from './app/mail/mail.module';
 import { WisataModule } from './app/wisata/wisata.module';
 import { FavoritModule } from './app/favorit/favorit.module';
+import { BookingModule } from './app/booking/booking.module';
+import { PaymentModule } from './app/payment/payment.module';
 
 @Module({
   imports: [ServeStaticModule.forRoot({
@@ -20,7 +22,7 @@ import { FavoritModule } from './app/favorit/favorit.module';
 
   ConfigModule.forRoot({
     isGlobal: true,
-  }), TypeOrmModule.forRoot(typeOrmConfig), AuthModule, KategoriModule, MailModule, WisataModule, FavoritModule],
+  }), TypeOrmModule.forRoot(typeOrmConfig), AuthModule, KategoriModule, MailModule, WisataModule, FavoritModule, BookingModule, PaymentModule],
   controllers: [AppController],
   providers: [AppService],
 })
